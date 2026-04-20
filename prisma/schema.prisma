@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+  output = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./mydatabase.db"
+}
+
+model Passwords {
+  id   Int      @id @default(autoincrement())
+  name String
+  user String
+  pass String
+  type PassType
+}
+
+enum PassType {
+  WORK
+  PERSONAL
+}

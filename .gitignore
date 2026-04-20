@@ -1,0 +1,8 @@
+node_modules
+release
+dist
+out
+.DS_Store
+.eslintcache
+*.log*
+prisma/*.db
